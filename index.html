@@ -46,56 +46,58 @@
             <h1 class="hidden">Техномарт</h1>
             <section class="menu">
                 <h2 class="hidden">Меню</h2>
-                <article class="menu__item menu__item-1 menu__new-item">
+                <section class="menu__item menu__item-1 menu__new-item">
                     <a href="#">
                         <h3 class="menu__item__title">Материалы</h3>
                         <p class="menu__item__text">На любой вкус</p>
                     </a>
-                </article>
-                <article class="menu__item menu__item-2">
+                </section>
+                <section class="menu__item menu__item-2">
                     <a href="#">
                         <h3 class="menu__item__title">Инструмент</h3>
                         <p class="menu__item__text">На все случаи</p>
                     </a>
-                </article>
-                <article class="menu__item menu__item-3">
+                </section>
+                <section class="menu__item menu__item-3">
                     <a href="#">
                         <h3 class="menu__item__title">Техника</h3>
                         <p class="menu__item__text">Для стройки</p>
                     </a>
-                </article>
-                <article class="menu__item menu__item-4">
+                </section>
+                <section class="menu__item menu__item-4">
                     <a href="#">
                         <h3 class="menu__item__title">Скидки 50%</h3>
                         <p class="menu__item__text">На 350 ТОВАРОВ</p>
                     </a>
-                </article>
-                <article class="menu__item menu__item-5">
+                </section>
+                <section class="menu__item menu__item-5">
                     <a href="#">
                         <h3 class="menu__item__title">Доставка</h3>
                         <p class="menu__item__text">Бесплатно</p>
                     </a>
-                </article>
+                </section>
                 <div class="menu__slider">
                     <ul class="menu__slider__list">
                         <li class="menu__slider__item">
                             <h3 class="menu__slider__title">Дрели</h3>
-                            <p class="menu__slider__text">Соседям на радость!</p>
-                            <button class="menu__slider__button" type="button">Стрелка влево</button>
-                            <button class="menu__slider__button" type="button">Стрелка вправо</button>
+                            <h4 class="menu__slider__subtitle">Соседям на радость!</h4>
                             <a class="menu__slider__link" href="catalog.html">Открыть каталог</a>
-                            <button class="menu__slider__nav menu__slider__nav-active" type="button"></button>
-                            <button class="menu__slider__nav" type="button"></button>
+                            <img class="menu__slider__img" src="https://via.placeholder.com/620x266" width="620" height="266" alt="Дрель">
                         </li>
                         <li class="menu__slider__item">
                             <h3 class="menu__slider__title">Перфораторы</h3>
-                            <p class="menu__slider__text">Настоящие мужские игрушки</p>
-                            <button class="menu__slider__button" type="button">Стрелка влево</button>
-                            <button class="menu__slider__button" type="button">Стрелка вправо</button>
+                            <h4 class="menu__slider__subtitle">Настоящие мужские игрушки</h4>
                             <a class="menu__slider__link" href="catalog.html">Открыть каталог</a>
-                            <button class="menu__slider__nav menu__slider__nav-active" type="button"></button>
-                            <button class="menu__slider__nav" type="button"></button>
+                            <img class="menu__slider__img" src="https://via.placeholder.com/620x266" width="620" height="266" alt="Перфоратор">
                         </li>
+                    </ul>
+                    <ul class="menu__slider__nav">
+                        <li><button class="menu__slider__nav__button" type="button">Стрелка влево</button></li>
+                        <li><button class="menu__slider__nav__button" type="button">Стрелка вправо</button></li>
+                    </ul>
+                    <ul class="menu__slider__pagination">
+                        <li><button class="menu__slider__pagination__button menu__slider__pagination__button-active" type="button"></button></li>
+                        <li><button class="menu__slider__pagination__button" type="button"></button></li>
                     </ul>
                 </div>
             </section>
@@ -184,37 +186,42 @@
                     Хороший интернет-магазин отличается от плохого не только ценами!<br>
                     Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
                 </p>
-                <ul class="service__list">
-                    <li class="service__item service__active-item"><button type="button">Доставка</button></li>
-                    <li class="service__item"><button type="button">Гарантия</button></li>
-                    <li class="service__item"><button type="button">Кредит</button></li>
-                </ul>
-                <div class="service__delivery">
-                    <h3 class="service__delivery__title">Доставка</h3>
-                    <p class="service__delivery__text">
-                        Мы с удовольствием доставим ваш товар прямо<br>
-                        к вашему подъезду совершенно бесплатно!<br>
-                        Ведь мы неплохо заработаем,<br>
-                        поднимая его на ваш этаж!
-                    </p>
-                </div>
-                <div class="service__guarantee">
-                    <h3 class="service__guarantee__title">Гарантия</h3>
-                    <p class="service__guarantee__text">
-                        Если купленный у нас товар поломается или заискрит,<br>
-                        а также в случае пожара, спровоцированного его возгоранием,<br>
-                        вы всегда можете быть уверены в нашей гарантии. Мы обменяем<br>
-                        сгоревший товар на новый.<br>
-                        Дом уж восстановите как-нибудь сами.
-                    </p>
-                </div>
-                <div class="service__credit">
-                    <h3 class="service__credit__title">Кредит</h3>
-                    <p class="service__credit__text">
-                        Залезть в долговую яму стало проще!<br>
-                        Кредитные консультанты придут вам на помощь.
-                    </p>
-                    <a href="#" class="service__credit__link">Отправить заявку</a>
+                <div class="service__slider">
+                    <ul class="service__list">
+                        <li class="service__item service__active-item"><button type="button">Доставка</button></li>
+                        <li class="service__item"><button type="button">Гарантия</button></li>
+                        <li class="service__item"><button type="button">Кредит</button></li>
+                    </ul>
+                    <div class="service__block">
+                        <h3 class="service__block__title">Доставка</h3>
+                        <p class="service__block__text">
+                            Мы с удовольствием доставим ваш товар прямо<br>
+                            к вашему подъезду совершенно бесплатно!<br>
+                            Ведь мы неплохо заработаем,<br>
+                            поднимая его на ваш этаж!
+                        </p>
+                        <img class="service__block__img" src="https://via.placeholder.com/468x261" width="468" height="261" alt="Доставка">
+                    </div>
+                    <div class="service__block">
+                        <h3 class="service__block__title">Гарантия</h3>
+                        <p class="service__block__text">
+                            Если купленный у нас товар поломается или заискрит,<br>
+                            а также в случае пожара, спровоцированного его возгоранием,<br>
+                            вы всегда можете быть уверены в нашей гарантии. Мы обменяем<br>
+                            сгоревший товар на новый.<br>
+                            Дом уж восстановите как-нибудь сами.
+                        </p>
+                        <img class="service__block__img" src="https://via.placeholder.com/389x283" width="389" height="283" alt="Гарантия">
+                    </div>
+                    <div class="service__block">
+                        <h3 class="service__block__title">Кредит</h3>
+                        <p class="service__block__text">
+                            Залезть в долговую яму стало проще!<br>
+                            Кредитные консультанты придут вам на помощь.
+                        </p>
+                        <a href="#" class="service__block__link">Отправить заявку</a>
+                        <img class="service__block__img" src="https://via.placeholder.com/465x285" width="465" height="285" alt="Кредит">
+                    </div>
                 </div>
             </section>
             <section class="about">
