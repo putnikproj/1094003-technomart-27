@@ -57,14 +57,13 @@
             <section class="filter">
                 <h2 class="filter__title">Фильтр</h2>
                 <div class="filter">
-                    <form oninput="lowest_price_output.value=lowest_price.value;highest_price_output.value=highest_price.value" class="filter__form" action="https://echo.htmlacademy.ru" method="POST">
+                    <form class="filter__form" action="https://echo.htmlacademy.ru" method="POST">
                         <fieldset class="filter-price__group">
                             <legend class="filter-price__title">Цена:</legend>
-                            <input class="filter-price__range" name="lowest_price" type="range" min="0" max="40000" step="50" value="0">
-                            <input class="filter-price__range" name="highest_price" type="range" min="0" max="40000" step="50" value="30000">
-                            <output class="filter-price__output" name="lowest_price_output" value="0">0</output>
-                            <p class="filter-price__output-separator">—</p>
-                            <output class="filter-price__output" name="highest_price_output" value="30000">30000</output>
+                            <input class="filter-price__range" name="price" type="range" multiple min="0" max="40000" step="50" value="0">
+                            <input class="filter-price__input" type="number" name="lowest_price" value="0">
+                            <p class="filter-price__input-separator">—</p>
+                            <input class="filter-price__input" type="number" name="highest_price" value="30000">
                         </fieldset>
                         <fieldset class="filter-other__group">
                             <legend class="filter-other__title">Производители:</legend>
