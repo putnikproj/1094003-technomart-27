@@ -296,5 +296,31 @@
                 </p>
             </div>
         </footer>
+        <div class="map-popup">
+            <img src="img/big-map.png" alt="Карта">
+            <button class="map-popup__close" type="button"></button>
+        </div>
+        <div class="contact-popup">
+            <form class="contact-popup__form" action="https://echo.htmlacademy.ru" method="POST">
+                <div class="contact-popup__form-top">
+                    <p class="contact-popup__form-half-part">
+                        <label class="contact-popup__label" for="contact-popup__input-name">Ваше имя:</label>
+                        <input class="contact-popup__half-part-input" type="text" name="name" id="contact-popup__input-name" value="" placeholder="Имя Фамилия">
+                    </p>
+                    <p class="contact-popup__form-half-part">
+                        <label class="contact-popup__label" for="contact-popup__input-email">Ваш e-mail:</label>
+                        <input class="contact-popup__half-part-input" type="email" name="email" id="contact-popup__input-email" value="" placeholder="email@example.com">
+                    </p>
+                    <p class="contact-popup__form-full-part">
+                        <label class="contact-popup__label" for="contact-popup__input-text">Текст письма:</label>
+                        <textarea class="contact-popup__full-part-input" name="text" id="contact-popup__input-text" value="" placeholder="В свободной форме"></textarea>
+                    </p>
+                </div>
+                <div class="contact-popup__form-bottom">
+                    <button class="contact-popup__form-submit" type="submit">Отправить</button>
+                </div>
+            </form>
+            <button class="contact-popup__close" type="button"></button>
+        </div>
     </body>
 </html>
