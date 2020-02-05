@@ -51,11 +51,7 @@ a {
     background-color: #ba2732;
 }
 
-.header-top__search-list {
-    list-style: none;
-}
-
-.header-top__search-list li:hover,
+.header-top__search-form:hover,
 .header-top__bookmarks:hover,
 .header-top__cart:hover {
     background-color: #212a3a;
@@ -211,7 +207,7 @@ a {
 
 .about__list {
     list-style: none;
-    font-family: Cuprum;
+    font-family: "Cuprum", Arial, sans-serif;
     font-size: 18px;
     line-height: 2;
     text-align: left;
@@ -313,10 +309,7 @@ a {
     margin: auto;
     text-align: center;
     color: white;
-    background-image: url("../img/item-button.svg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center;
+    background: url("../img/item-button.svg") no-repeat 100% center;
 }
 
 .catalog__item-hover {

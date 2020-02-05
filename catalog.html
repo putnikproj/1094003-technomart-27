@@ -11,7 +11,12 @@
         <header>
             <div class="header-top">
                 <a href="index.html"><img class="header-top__logo" src="img/logo-technomart.svg" width="109" height="19" alt="Логотип"></a>
-                <input class="header-top__search" type="text" placeholder="Поиск:">
+                <form class="header-top__search-form" action="https://echo.htmlacademy.ru" method="POST">
+                    <p>
+                        <input class="header-top__search" id="header-top__search" type="text" placeholder="Поиск:">
+                        <label for="header-top__search">Поиск</label>
+                    </p>
+                </form>
                 <ul class="header-top__list">
                     <li class="header-top__item header-top__bookmarks"><a href="#">Закладки: 0</a></li>
                     <li class="header-top__item header-top__cart"><a href="#">Корзина: 0</a></li>
