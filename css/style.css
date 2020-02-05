@@ -159,6 +159,10 @@ a {
     text-decoration: underline;
 }
 
+.header-bottom__logged-in-list a:hover {
+    color: #ee3643;
+}
+
 .header-bottom__logged-in-list a:active {
     color: rgba(50, 66, 92, 0.3);
     text-decoration: underline;
@@ -188,46 +192,6 @@ a {
 /* End header */
 
 /* Index.html */
-
-.about__title,
-.contacts__title {
-    font-size: 30px;
-    text-align: left;
-    color: #000000;
-}
-
-.about__text,
-.contacts__text {
-    font-family: 'PT Sans', Arial, sans-serif;
-    font-size: 13px;
-    line-height: 1.85;
-    text-align: left;
-    color: #000000;
-}
-
-.about__list {
-    list-style: none;
-    font-family: "Cuprum", Arial, sans-serif;
-    font-size: 18px;
-    line-height: 2;
-    text-align: left;
-    color: #000000;
-}
-
-.about__item::before {
-    content: url("../img/indicator.png");
-    position: relative;
-    top: -5px;
-    left: -10px;
-}
-
-.about__link,
-.contacts__link {
-    font-size: 14px;
-    text-align: center;
-    color: white;
-    background-color: #ee3643;
-}
 
 .menu__item-1 {
     background-color: #ffbf47;
@@ -260,6 +224,7 @@ a {
     font-size: 14px;
     background-color: rgba(0, 0, 0, 0.1);
     color: white;
+    text-transform: uppercase;
 }
 
 .menu__item__text:hover {
@@ -278,6 +243,7 @@ a {
     font-size: 36px;
     font-weight: bold;
     color: white;
+    text-transform: uppercase;
 }
 
 .menu__slider__subtitle {
@@ -289,6 +255,7 @@ a {
     font-size: 14px;
     color: white;
     background-color: #ee3643;
+    text-transform: uppercase;
 }
 
 .menu__slider__link:hover {
@@ -317,6 +284,7 @@ a {
     font-size: 30px;
     text-align: left;
     color: #32425c;
+    text-transform: uppercase;
 }
 
 .popular__link,
@@ -324,6 +292,7 @@ a {
     color: white;
     font-size: 14px;
     background-color: #ee3643;
+    text-transform: uppercase;
 }
 
 .popular__list {
@@ -438,6 +407,7 @@ a {
 .service__title {
     font-size: 30px;
     color: black;
+    text-transform: uppercase;
 }
 
 .service__text {
@@ -458,6 +428,7 @@ a {
     font-size: 21px;
     font-weight: bold;
     color: #ffffff;
+    cursor: pointer;
 }
 
 .service__active-item button {
@@ -467,11 +438,21 @@ a {
     font-size: 21px;
     font-weight: bold;
     color: #32425c;
+    cursor: default;
+}
+
+.service__item button:hover {
+    background-color: #293449;
+}
+
+.service__active-item button:hover {
+    background-color: #ffffff;
 }
 
 .service__block__title {
     font-size: 36px;
     color: #32425c;
+    text-transform: uppercase;
 }
 
 .service__block__text {
@@ -489,6 +470,48 @@ a {
 
 .service__block:not(.service__active-block) {
     display: none;
+}
+
+.about__title,
+.contacts__title {
+    font-size: 30px;
+    text-align: left;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.about__text,
+.contacts__text {
+    font-family: 'PT Sans', Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.85;
+    text-align: left;
+    color: #000000;
+}
+
+.about__list {
+    list-style: none;
+    font-family: "Cuprum", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 2;
+    text-align: left;
+    color: #000000;
+}
+
+.about__item::before {
+    content: url("../img/indicator.png");
+    position: relative;
+    top: -5px;
+    left: -10px;
+}
+
+.about__link,
+.contacts__link {
+    font-size: 14px;
+    text-align: center;
+    color: white;
+    background-color: #ee3643;
+    text-transform: uppercase;
 }
 
 /* End index.html */
@@ -514,10 +537,37 @@ a {
     background-color: #f2f6f8;
 }
 
-.filter__form {
+.filter {
     font-family: 'PT Sans', Arial, sans-serif;
     text-transform: uppercase;
+}
+
+.filter__title {
+    font-size: 13px;
+    color: black;
+    background-color: #f7f3ec;
+}
+
+.filter__form {
     color: #000000;
+}
+
+.filter-price__group {
+    border: none;
+}
+
+.filter-price__range-span {
+    background-color: #f7f3ec;
+}
+
+.filter-price__input {
+    background-color: #f7f3ec;
+    border: none;
+}
+
+.filter-other__group {
+    border: none;
+    border-top: solid 1px #f7f3ec;
 }
 
 .filter-other__title {
@@ -537,6 +587,57 @@ a {
     border: solid 1px #e5e5e5;
 }
 
+.sort {
+    background-color: #f7f3ec;
+    font-family: 'PT Sans', Arial, sans-serif;
+    text-transform: uppercase;
+}
+
+.sort__title {
+    font-size: 13px;
+}
+
+.sort__list {
+    list-style: none;
+}
+
+.sort__item button {
+    font-family: inherit;
+    text-transform: inherit;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    border-bottom: dotted 1px #ee3643;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.18);
+}
+
+.sort__item button:hover {
+    border-bottom-style: solid;
+    color: rgba(0, 0, 0, 1);
+    cursor: pointer;
+}
+
+.sort__item button:active,
+.sort__item-active button {
+    border: none;
+    color: #ee3643;
+}
+
+.sort__item-active button:hover {
+    border: none;
+    color: #ee3643;
+    cursor: default;
+}
+
+.sort__list-2 {
+    list-style: none;
+}
+
+.sort__item-2 button {
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+
 .catalog__list {
     list-style: none;
 }
@@ -544,6 +645,11 @@ a {
 .catalog__item {
     border: solid 1px #eaeaea;
     font-family: 'PT Sans', Arial, sans-serif;
+}
+
+.catalog__item:hover {
+    box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
+    border: none;
 }
 
 .catalog__caption {
@@ -590,10 +696,67 @@ a {
     border-radius: 3px;
 }
 
+.catalog__add-to-cart:hover {
+    background-color: #5fbb2d;
+}
+
+.catalog__add-to-cart:active {
+    background-color: #518534;
+}
+
 .catalog__add-to-bookmarks {
     background-color: white;
     border: solid 3px #63a63e;
     border-radius: 3px;
+}
+
+.catalog__add-to-bookmarks:hover {
+    border-color: #32425c;
+}
+
+.catalog__add-to-bookmarks:active {
+    opacity: 0.3;
+}
+
+.catalog__nav-list {
+    list-style: none;
+}
+
+.catalog__nav-item a {
+    color: black;
+    font-size: 13px;
+    font-family: 'PT Sans', Arial, sans-serif;
+    border: solid 1px #e5e5e5;
+}
+
+.catalog__nav-item a:hover {
+    border-color: #bdc6ca;
+}
+
+.catalog__nav-item a:active {
+    border-color: #ee3643;
+}
+
+.catalog__nav-active-item {
+    color: white;
+    font-size: 13px;
+    font-family: 'PT Sans', Arial, sans-serif;
+    background-color: #ee3643;
+}
+
+.about {
+    background-color: #f4f7f9;
+}
+
+.about__title {
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+.about__text {
+    font-family: 'PT Sans', Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.85;
 }
 
 /* End catalog.html */

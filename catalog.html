@@ -68,7 +68,7 @@
                     <form class="filter__form" action="https://echo.htmlacademy.ru" method="POST">
                         <fieldset class="filter-price__group">
                             <legend class="filter-price__title">Цена:</legend>
-                            <input class="filter-price__range" name="price" type="range" multiple min="0" max="40000" step="50" value="0">
+                            <span class="filter-price__range-span"><input name="price" type="range" multiple min="0" max="40000" step="50" value="0"></span>
                             <input class="filter-price__input" type="number" name="lowest_price" value="0">
                             <p class="filter-price__input-separator">—</p>
                             <input class="filter-price__input" type="number" name="highest_price" value="30000">
@@ -120,13 +120,13 @@
                 <div class="sort">
                     <h3 class="sort__title">Сортировка:</h3>
                     <ul class="sort__list">
-                        <li class="sort__item"><button class="sort__item__bottom sort__item__active-bottom" type="button">По цене</button></li>
-                        <li class="sort__item"><button class="sort__item__bottom" type="button">По типу</button></li>
-                        <li class="sort__item"><button class="sort__item__bottom" type="button">По функционалу</button></li>
+                        <li class="sort__item sort__item-active"><button type="button">По цене</button></li>
+                        <li class="sort__item"><button type="button">По типу</button></li>
+                        <li class="sort__item"><button type="button">По функционалу</button></li>
                     </ul>
                     <ul class="sort__list-2">
-                        <li class="sort__item-2"><button class="sort__item__bottom-2 sort__item__active-bottom-2" type="button">По возрастанию</button></li>
-                        <li class="sort__item-2"><button class="sort__item__bottom-2" type="button">На уменьшение</button></li>
+                        <li class="sort__item-2 sort__item-2-active"><button type="button">По возрастанию</button></li>
+                        <li class="sort__item-2"><button type="button">На уменьшение</button></li>
                     </ul>
                 </div>
                 <ul class="catalog__list">
