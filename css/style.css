@@ -229,6 +229,268 @@ a {
     background-color: #ee3643;
 }
 
+.menu__item-1 {
+    background-color: #ffbf47;
+}
+
+.menu__item-2 {
+    background-color: #3bbce3;
+}
+
+.menu__item-3 {
+    background-color: #dc91d8;
+}
+
+.menu__item-4 {
+    background-color: #8ed78f;
+}
+
+.menu__item-5 {
+    background-color: #ffc047;
+}
+
+.menu__item__title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    color: white;
+}
+
+.menu__item__text {
+    font-size: 14px;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.menu__item__text:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.menu__item__text:active {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.menu__slider__list {
+    list-style: none;
+}
+
+.menu__slider__title {
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+}
+
+.menu__slider__subtitle {
+    font-size: 18px;
+    color: white;
+}
+
+.menu__slider__link {
+    font-size: 14px;
+    color: white;
+    background-color: #ee3643;
+}
+
+.menu__slider__link:hover {
+    background-color: #ca2c37;
+}
+
+.menu__slider__link:active {
+    background-color: #ba2732;
+}
+
+.menu__slider__nav {
+    list-style: none;
+}
+
+.menu__slider__pagination {
+    list-style: none;
+}
+
+.popular__header,
+.brands__header {
+    background-color: #f9f5f0;
+}
+
+.popular__title,
+.brands__title {
+    font-size: 30px;
+    text-align: left;
+    color: #32425c;
+}
+
+.popular__link,
+.brands__link {
+    color: white;
+    font-size: 14px;
+    background-color: #ee3643;
+}
+
+.popular__list {
+    list-style: none;
+}
+
+.popular__item {
+    border: solid 1px #eaeaea;
+    font-family: 'PT Sans', Arial, sans-serif;
+}
+
+.popular__item:hover {
+    box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
+    border: none;
+}
+
+.popular__caption {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.11;
+    text-align: center;
+    color: black;
+}
+
+.popular__old-price {
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: line-through;
+    color: #a9a9a9;
+}
+
+.popular__price {
+    width: 141px;
+    padding: 10px 0;
+    position: relative;
+    font-size: 17px;
+    font-weight: bold;
+    margin: auto;
+    text-align: center;
+    color: white;
+    background: url("../img/item-button.svg") no-repeat 100% center;
+}
+
+.popular__item-hover {
+    list-style: none;
+    display: none;
+}
+
+.popular__item-hover button {
+    text-transform: uppercase;
+}
+
+.popular__add-to-cart {
+    box-shadow: inset 0px -3px 0 0 #367315;
+    background-color: #63a63e;
+    border: none;
+    border-radius: 3px;
+}
+
+.popular__add-to-cart:hover {
+    background-color: #5fbb2d;
+}
+
+.popular__add-to-cart:active {
+    background-color: #518534;
+}
+
+.popular__add-to-bookmarks {
+    background-color: white;
+    border: solid 3px #63a63e;
+    border-radius: 3px;
+}
+
+.popular__add-to-bookmarks:hover {
+    border-color: #32425c;
+}
+
+.popular__add-to-bookmarks:active {
+    opacity: 0.3;
+}
+
+.brands__list {
+    list-style: none;
+}
+
+.brands__item {
+    width: 220px;
+    height: 145px;
+    border: solid 1px #eaeaea;
+    background-color: #ffffff;
+}
+
+.brands__item:hover {
+    box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
+    border: none;
+}
+
+.brands__item:active {
+    box-shadow: 0px 4px 10px 0 rgba(41, 52, 73, 0.5);
+}
+
+.brands__img {
+    display: block;
+    margin: 0 auto;
+}
+
+.service {
+    background-color: #f4f7f9;
+}
+
+.service__title {
+    font-size: 30px;
+    color: black;
+}
+
+.service__text {
+    font-family: 'PT Sans', Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.85;
+    color: black;
+}
+
+.service__list {
+    list-style: none;
+}
+
+.service__item button {
+    box-shadow: 0px 1px 0 0 #293449, inset 0px 1px 0 0 #405069;
+    background-color: #32425c;
+    border: none;
+    font-size: 21px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.service__active-item button {
+    box-shadow: 0px 1px 0 0 #ffffff, inset 0px 1px 0 0 #ffffff;
+    background-color: #ffffff;
+    border: none;
+    font-size: 21px;
+    font-weight: bold;
+    color: #32425c;
+}
+
+.service__block__title {
+    font-size: 36px;
+    color: #32425c;
+}
+
+.service__block__text {
+    font-family: 'PT Sans', Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.85;
+    color: black;
+}
+
+.service__block__link {
+    color: white;
+    font-size: 14px;
+    background-color: #ee3643;
+}
+
+.service__block:not(.service__active-block) {
+    display: none;
+}
+
 /* End index.html */
 
 /* Catalog.html */
