@@ -475,7 +475,7 @@ a {
     text-transform: uppercase;
     margin: 0;
     margin-top: 22px;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
     line-height: 1;
 }
 
@@ -501,7 +501,7 @@ a {
     padding: 10px 48px;
     border-radius: 3px;
     line-height: 1.29;
-    margin-top: 120px;
+    margin-top: 122px;
 }
 
 .menu__slider__link:hover {
@@ -517,14 +517,17 @@ a {
     margin: 0;
     padding: 0;
     position: absolute;
-    top: 133px;
-    left: 25px;
+    left: 0;
+    bottom: 50%;
+    right: 0;
+    padding: 0 24px;
 }
 
 .menu__slider__nav li:last-child {
     position: absolute;
-    right: -470px;
+    right: 0;
     top: 0;
+    padding: 0 20px;
 }
 
 .menu__slider__pagination {
