@@ -462,7 +462,10 @@ a {
 .menu__slider__over-image {
     position: absolute;
     top: 0;
-    left: 24px;
+    left: 0;
+    width: 100%;
+    padding: 0 24px;
+    box-sizing: border-box;
 }
 
 .menu__slider__title {
@@ -488,17 +491,17 @@ a {
 }
 
 .menu__slider__link {
+    display: inline-block;
     font-size: 14px;
     color: white;
     background-color: #ee3643;
     text-transform: uppercase;
-    position: absolute;
-    bottom: -155px;
-    width: 195px;
+    box-sizing: border-box;
     text-align: center;
-    padding: 11px 0;
+    padding: 10px 48px;
     border-radius: 3px;
     line-height: 1.29;
+    margin-top: 120px;
 }
 
 .menu__slider__link:hover {
@@ -526,11 +529,11 @@ a {
 
 .menu__slider__pagination {
     list-style: none;
-    margin: 0;
+    margin: 0 47.5%;
     padding: 0;
     position: absolute;
-    top: 200px;
-    left: 310px;
+    bottom: 50px;
+    display: flex;
 }
 
 .popular__header,
@@ -592,7 +595,9 @@ a {
 }
 
 .popular__item a {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     min-height: 318px;
 }
 
@@ -627,12 +632,10 @@ a {
     position: relative;
     font-size: 17px;
     font-weight: bold;
-    margin-bottom: 21px;
+    margin: 15px auto;
     text-align: center;
+    margin-top: auto;
     color: white;
-    position: absolute;
-    bottom: 0;
-    left: 41px;
     background: url("../img/item-button.svg") no-repeat 100% center;
 }
 
@@ -1188,6 +1191,13 @@ a {
     position: relative;
 }
 
+.catalog__item a {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    min-height: 318px;
+}
+
 .catalog__item:hover {
     box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
     border-color: white;
@@ -1199,8 +1209,8 @@ a {
     line-height: 1.11;
     text-align: center;
     color: black;
-    margin-bottom: 15px;
     margin: 5px 0;
+    margin-bottom: 15px;
 }
 
 .catalog__old-price {
@@ -1214,18 +1224,14 @@ a {
 
 .catalog__price {
     width: 141px;
-    box-sizing: border-box;
     padding: 9.5px 0;
     position: relative;
     font-size: 17px;
     font-weight: bold;
-    margin: auto;
+    margin: 15px auto;
     text-align: center;
+    margin-top: auto;
     color: white;
-    margin-bottom: 21px;
-    position: absolute;
-    bottom: 0;
-    left: 41px;
     background: url("../img/item-button.svg") no-repeat 100% center;
 }
 
