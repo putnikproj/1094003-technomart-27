@@ -78,13 +78,18 @@
                                 <legend class="filter-price__title">Цена:</legend>
                                 <div class="filter-price__range-slider">
                                     <div class="filter-price__range-slider-track">
+                                        <div class="filter-price__range-slider-track__scale">
+                                            <div class="filter-price__range-slider-track__bar"></div>
+                                        </div>
                                         <div class="filter-price__range-slider-pin filter-price__range-slider-pin-min"></div>
                                         <div class="filter-price__range-slider-pin filter-price__range-slider-pin-max"></div>
                                     </div>
                                     <div class="filter-price__inputs">
-                                        <input class="filter-price__input" type="number" value="0" name="min">
-                                        <span class="filter-price__separator">—</span>
-                                        <input class="filter-price__input" type="number" value="30000" name="max">
+                                        <label class="visually-hidden" for="filter-price__input-min">Минимальная цена</label>
+                                        <input class="filter-price__input" id="filter-price__input-min" type="number" value="0" name="min">
+                                        <div class="filter-price__sep">—</div>
+                                        <label class="visually-hidden" for="filter-price__input-max">Максимальная цена</label>
+                                        <input class="filter-price__input" id="filter-price__input-max" type="number" value="30000" name="max">
                                     </div>
                                 </div>
                             </fieldset>
@@ -140,8 +145,8 @@
                             <li class="sort__item"><button type="button">По функционалу</button></li>
                         </ul>
                         <ul class="sort__list-2">
-                            <li class="sort__item-2 sort__item-2-active"><button type="button">По возрастанию</button></li>
-                            <li class="sort__item-2"><button type="button">На уменьшение</button></li>
+                            <li class="sort__item-2 sort__item-2-up sort__item-2-active"><button type="button"><span class="visually-hidden">По возрастанию</span><svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 0L0 10h11z"/></svg></button></li>
+                            <li class="sort__item-2 sort__item-2-down"><button type="button"><span class="visually-hidden">На уменьшение</span><svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 10L0 0h11"/></svg></button></li>
                         </ul>
                     </div>
                     <ul class="catalog__list">

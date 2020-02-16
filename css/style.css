@@ -1375,14 +1375,17 @@ a {
     color: black;
     background-color: #f7f3ec;
     margin-top: 0;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.38;
     letter-spacing: normal;
-    padding: 10.5px 0;
+    padding: 0;
+    padding-top: 10px;
+    padding-bottom: 11px;
     padding-left: 18px;
+    border-radius: 2px;
 }
 
 .filter__form {
@@ -1396,22 +1399,60 @@ a {
     font-style: normal;
     line-height: 1.76;
     letter-spacing: normal;
-    margin-bottom: 15px;
+    margin-bottom: 14px;
 }
 
 .filter-price__group {
     border: none;
     padding: 0;
     margin: 0;
-    margin-bottom: 20px; /* Во второй части задание может быть другой */
+    margin-bottom: 25px;
 }
 
 .filter-price__range-slider-track {
+    position: relative;
     width: 220px;
     min-height: 80px;
     background-color: #f7f3ec;
-    margin-bottom: 10px;
-    border-radius: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 39px;
+    margin-bottom: 9px;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.filter-price__range-slider-track__scale {
+    height: 2px;
+    background-color: #d7dcde;
+}
+
+.filter-price__range-slider-track__bar {
+    width: 80%;
+    height: 2px;
+    background: #00ca74;
+}
+
+.filter-price__range-slider-pin {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 4px;
+    height: 4px;
+    padding: 0;
+    border: 8px solid #ffffff;
+    background-color: #ababab;
+    box-shadow: 0 2px 1px 0 #cfcfcf;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.filter-price__range-slider-pin-min {
+    left: 20px;
+}
+
+.filter-price__range-slider-pin-max {
+    left: 160px;
 }
 
 .filter-price__range-span {
@@ -1424,14 +1465,44 @@ a {
     align-items: center;
 }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+input[type=number]{
+  -moz-appearance: textfield;
+}
+
+.filter-price__sep {
+    margin: 0 8px;
+    padding-bottom: 2px;
+}
+
 .filter-price__input {
     background-color: #f7f3ec;
+    font-family: 'PT Sans', Arial, sans-serif;
+    font-size: 17px;
     border: none;
-    padding: 10px 0;
-    padding-left: 15px;
-    width: 80px;
+    padding: 0;
+    padding-top: 9px;
+    padding-bottom: 10px;
+    width: 95px;
+    box-sizing: border-box;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 3px;
+    /* IE support */
+    flex-grow: 1;
+}
+
+.filter-price__input:first-of-type {
+    padding-left: 5px;
+}
+
+.filter-price__input:last-of-type {
+    padding-left: 1px;
 }
 
 .filter-other__group {
@@ -1449,6 +1520,7 @@ a {
     border-top: solid 1px #e5e5e5;
     width: 100%;
     line-height: 1.76;
+    letter-spacing: 0.17px;
 }
 
 .filter-other__list {
@@ -1498,6 +1570,8 @@ a {
     padding: 9.5px 17px;
     padding-left: 19px;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .sort__title {
@@ -1515,8 +1589,12 @@ a {
 .sort__list {
     list-style: none;
     margin: 0;
+    margin-left: 93px;
     padding: 0;
     display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    top: -2px;
 }
 
 .sort__item:first-child {
@@ -1562,12 +1640,51 @@ a {
     margin: 0;
     padding: 0;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.sort__item-2 {
+    width: 11px;
+    height: 10px;
+    display: flex;
+}
+
+.sort__item-2:first-child {
+    margin-right: 21px;
 }
 
 .sort__item-2 button {
     border: none;
+    width: 11px;
+    height: 10px;
     background-color: rgba(0, 0, 0, 0);
     padding: 0;
+    cursor: pointer;
+}
+
+.sort__item-2-active button {
+    cursor: default;
+}
+
+.sort__item-2 svg {
+    display: block;
+}
+
+.sort__item-2 path {
+    fill: #c5c5c5;
+}
+
+.sort__item-2:hover path {
+    fill: #231F20;
+}
+
+.sort__item-2-active:hover path,
+.sort__item-2-active path,
+.sort__item-2:active path {
+    fill: #ee3643;
 }
 
 .catalog {
