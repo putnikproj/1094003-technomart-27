@@ -1213,7 +1213,6 @@ a {
 /* Contact popup */
 
 .contact-popup {
-    display: none;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -1226,6 +1225,7 @@ a {
     min-height: 430px;
     box-sizing: border-box;
     border-top: solid 7px #ff5357;
+    display: none;
 }
 
 .contact-popup__form {
@@ -2364,4 +2364,55 @@ input[type=number]{
     text-decoration: none;
     color: #ee3643;
     outline: none;
+}
+
+/* Modal show */
+
+@keyframes open {
+    0% {
+        transform: translateY(-2000px);
+    }
+
+    70% {
+        transform: translateY(30px);
+    }
+
+    90% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes error {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-10px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(10px);
+    }
+}
+
+.modal__opened {
+    display: block;
+    animation: open 0.6s;
+}
+
+.modal__error {
+    animation: error 0.6s;
 }
