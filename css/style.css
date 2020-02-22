@@ -2438,12 +2438,6 @@ input[type=number]{
 }
 
 .map-popup iframe {
-    position: relative;
-    z-index: 2;
-    border: none;
-}
-
-.map-popup iframe {
     border: none;
     margin: 0;
     padding: 0;
