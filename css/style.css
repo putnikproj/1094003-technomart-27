@@ -259,7 +259,6 @@ a {
 .header-top__checkout a:hover,
 .header-top__checkout a:focus {
     background-color: #5fbb2d;
-    outline: none;
 }
 
 .header-top__checkout a:active {
@@ -369,7 +368,6 @@ a {
 .header-bottom__reg-item button:focus {
     color: #ee3643;
     cursor: pointer;
-    outline: none;
 }
 
 .header-bottom__reg-item button:active {
@@ -465,7 +463,6 @@ a {
 .header-bottom__logged-in-list a:hover,
 .header-bottom__logged-in-list a:focus {
     color: #ee3643;
-    outline: none;
 }
 
 .header-bottom__logged-in-list a:active {
@@ -772,7 +769,7 @@ a {
     margin-right: 0;
 }
 
-.menu__slider__pagination__item button {
+.menu__slider__pagination__item div {
     width: 10px;
     height: 10px;
     padding: 0;
@@ -781,12 +778,10 @@ a {
     border-radius: 50%;
     background-color: white;
     border: 2px white solid;
-    cursor: pointer;
 }
 
-.menu__slider__pagination__item-active button {
+.menu__slider__pagination__item-active div {
     background-color: #ee3643;
-    cursor: default;
 }
 
 /* Popular products and brands */
@@ -901,7 +896,6 @@ a {
 .brands__item a:focus {
     box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
     border-color: white;
-    outline: none;
 }
 
 .brands__item:first-child img {
@@ -1628,23 +1622,30 @@ input[type=number]{
     position: absolute;
     top: -1px;
     margin-left: -34px;
-    width: 27px;
+    width: 23px;
     height: 23px;
-	background: url(../img/checkbox-off.svg) no-repeat;
+    background: url(../img/checkbox-off.svg) no-repeat;
 }
 
 .filter-other__input-checkbox:checked + .filter-other__label::before {
-	background-image: url(../img/checkbox-on.svg);
+    width: 27px;
+    background-image: url(../img/checkbox-on.svg);
 }
 
-.filter-other__input-checkbox:hover + .filter-other__label::before,
-.filter-other__input-checkbox:focus + .filter-other__label::before {
-	background-image: url(../img/checkbox-off-hover.svg);
+.filter-other__input-checkbox:hover + .filter-other__label::before {
+    background-image: url(../img/checkbox-off-hover.svg);
 }
 
-.filter-other__input-checkbox:checked:hover + .filter-other__label::before,
-.filter-other__input-checkbox:checked:focus + .filter-other__label::before {
+.filter-other__input-checkbox:checked:hover + .filter-other__label::before {
 	background-image: url(../img/checkbox-on-hover.svg);
+}
+
+.filter-other__input-checkbox:focus + .filter-other__label::before,
+.filter-other__input-checkbox:checked:focus + .filter-other__label::before {
+    outline-color: rgb(77, 144, 254);
+    outline-offset: -2px;
+    outline-style: auto;
+    outline-width: 5px;
 }
 
 .filter-other__input-checkbox:disabled + .filter-other__label::before {
@@ -1677,14 +1678,20 @@ input[type=number]{
 	background-image: url(../img/radio-on.svg);
 }
 
-.filter-other__input-radio:hover + .filter-other__label::before,
-.filter-other__input-radio:focus + .filter-other__label::before {
+.filter-other__input-radio:hover + .filter-other__label::before {
 	background-image: url(../img/radio-off-hover.svg);
 }
 
-.filter-other__input-radio:checked:hover + .filter-other__label::before,
-.filter-other__input-radio:checked:focus + .filter-other__label::before {
+.filter-other__input-radio:checked:hover + .filter-other__label::before {
 	background-image: url(../img/radio-on-hover.svg);
+}
+
+.filter-other__input-radio:focus + .filter-other__label::before,
+.filter-other__input-radio:checked:focus + .filter-other__label::before {
+    outline-color: rgb(77, 144, 254);
+    outline-offset: -2px;
+    outline-style: auto;
+    outline-width: 5px;
 }
 
 .filter-other__input-radio:disabled + .filter-other__label::before {
@@ -2053,7 +2060,6 @@ input[type=number]{
 .product-card a:focus {
     box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
     border-color: white;
-    outline: none;
 }
 
 .product-card__new {
@@ -2274,7 +2280,6 @@ input[type=number]{
 .footer-top-1part__item a:focus,
 .footer-top-2part__item a:focus {
     text-decoration: underline;
-    outline: none;
 }
 
 .footer-top-1part__item a:active,
@@ -2344,7 +2349,6 @@ input[type=number]{
 .footer-bottom__item a:hover,
 .footer-bottom__item a:focus {
     background-color: #ee3643;
-    outline: none;
 }
 
 .footer-bottom__feedback,
@@ -2380,7 +2384,6 @@ input[type=number]{
 .footer-bottom__developed a:focus {
     text-decoration: none;
     color: #ee3643;
-    outline: none;
 }
 
 /* Modal */
@@ -2441,6 +2444,9 @@ input[type=number]{
 }
 
 .map-popup iframe {
+    border: none;
+    margin: 0;
+    padding: 0;
     position: relative;
     z-index: 2;
     border: none;
