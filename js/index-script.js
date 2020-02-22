@@ -12,6 +12,14 @@ var map = document.querySelector(".map-popup");
 var map_open = document.querySelector(".contacts__open-popup");
 var map_close = document.querySelector(".map-popup__close");
 
+var slides = document.querySelectorAll(".menu__slider__item");
+var slides_amount = slides.length - 1;
+var slides_current = 0;
+var slides_leftbutton = document.querySelector(".menu__slider__nav-item-left");
+var slides_rightbutton = document.querySelector(".menu__slider__nav-item-right");
+var pagination = document.querySelectorAll(".menu__slider__pagination__item");
+var pagination_amount = pagination.length - 1;
+var pagination_current = 0;
 
 try {
     storage = localStorage.getItem("name");
@@ -73,4 +81,56 @@ map_open.addEventListener("click", function (evt) {
 map_close.addEventListener("click", function (evt) {
     evt.preventDefault();
     map.classList.remove("modal__opened");
+});
+
+// Slider
+
+slides_rightbutton.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    slides[slides_current].classList.remove("menu__slider__active-item");
+    if (slides_current + 1 > slides_amount) {
+        slides[0].classList.add("menu__slider__active-item");
+    } else {
+        slides[slides_current + 1].classList.add("menu__slider__active-item");
+    }
+    slides_current = slides_current + 1;
+    if (slides_current > slides_amount) {
+        slides_current = 0;
+    };
+    // Pagination
+    pagination[pagination_current].classList.remove("menu__slider__pagination__item-active");
+    if (pagination_current + 1 > pagination_amount) {
+        pagination[0].classList.add("menu__slider__pagination__item-active");
+    } else {
+        pagination[pagination_current + 1].classList.add("menu__slider__pagination__item-active");
+    }
+    pagination_current = pagination_current + 1;
+    if (pagination_current > pagination_amount) {
+        pagination_current = 0;
+    };
+});
+
+slides_leftbutton.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    slides[slides_current].classList.remove("menu__slider__active-item");
+    if (slides_current - 1 < 0) {
+        slides[slides_amount].classList.add("menu__slider__active-item");
+    } else {
+        slides[slides_current - 1].classList.add("menu__slider__active-item");
+    }
+    slides_current = slides_current - 1;
+    if (slides_current < 0) {
+        slides_current = slides_amount;
+    };
+    // Pagination
+    pagination[pagination_current].classList.remove("menu__slider__pagination__item-active");
+    if (pagination_current - 1 < 0) {
+        pagination[pagination_amount].classList.add("menu__slider__pagination__item-active");
+    } else {
+        pagination[pagination_current - 1].classList.add("menu__slider__pagination__item-active");
+    }
+    pagination_current = pagination_current - 1;
+    if (pagination_current < 0) {
+        pagination_current = pagination_amount;
+    };
 });

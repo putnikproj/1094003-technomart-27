@@ -660,7 +660,7 @@ a {
     padding: 0;
 }
 
-.menu__slider__item:last-child {
+.menu__slider__item:not(.menu__slider__active-item) {
     display: none;
 }
 
@@ -753,7 +753,7 @@ a {
 
 .menu__slider__pagination {
     list-style: none;
-    margin: 0 295px;
+    margin: 0 auto;
     padding: 0;
     position: absolute;
     bottom: 34px;
@@ -761,7 +761,15 @@ a {
     right: 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+}
+
+.menu__slider__pagination__item {
+    margin-right: 10px;
+}
+
+.menu__slider__pagination__item:last-child {
+    margin-right: 0;
 }
 
 .menu__slider__pagination__item button {
