@@ -8,11 +8,18 @@ var modal_form = document.querySelector(".contact-popup__form");
 var isStorageSupport = true;
 var storage = "";
 
+var map = document.querySelector(".map-popup");
+var map_open = document.querySelector(".contacts__open-popup");
+var map_close = document.querySelector(".map-popup__close");
+
+
 try {
     storage = localStorage.getItem("name");
 } catch (err) {
     isStorageSupport = false;
 }
+
+// Contact us
 
 modal_open.addEventListener("click", function (evt) {
     evt.preventDefault();
@@ -54,4 +61,16 @@ window.addEventListener("keydown", function (evt) {
             modal.classList.remove("modal__error");
         }
     }
+});
+
+// Map
+
+map_open.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    map.classList.add("modal__opened");
+});
+
+map_close.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    map.classList.remove("modal__opened");
 });

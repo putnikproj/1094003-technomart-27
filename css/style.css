@@ -1201,6 +1201,7 @@ a {
 .map-popup__close,
 .contact-popup__close {
     position: absolute;
+    z-index: 20;
     top: 4px;
     right: 5px;
     border: none;
@@ -2366,7 +2367,7 @@ input[type=number]{
     outline: none;
 }
 
-/* Modal show */
+/* Modal */
 
 @keyframes open {
     0% {
@@ -2415,4 +2416,23 @@ input[type=number]{
 
 .modal__error {
     animation: error 0.6s;
+}
+
+.map-popup iframe {
+    position: relative;
+    z-index: 2;
+    border: none;
+}
+
+.map-popup iframe {
+    position: relative;
+    z-index: 2;
+    border: none;
+}
+
+.map-popup img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
