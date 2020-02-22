@@ -211,11 +211,11 @@
                     </p>
                     <div class="service__slider">
                         <ul class="service__list">
-                            <li class="service__item service__active-item"><button type="button">Доставка</button></li>
-                            <li class="service__item"><button type="button">Гарантия</button></li>
-                            <li class="service__item"><button type="button">Кредит</button></li>
+                            <li class="service__item service__active-item" data-id="delivery"><button type="button">Доставка</button></li>
+                            <li class="service__item" data-id="guarantee"><button type="button">Гарантия</button></li>
+                            <li class="service__item" data-id="loan"><button type="button">Кредит</button></li>
                         </ul>
-                        <div class="service__block service__active-block">
+                        <div class="service__block service__active-block" data-id="delivery">
                             <h3 class="service__block__title">Доставка</h3>
                             <p class="service__block__text">
                                 Мы с удовольствием доставим ваш товар прямо<br>
@@ -225,7 +225,7 @@
                             </p>
                             <img class="service__block__img" src="img/delivery.png" width="468" height="261" alt="Доставка">
                         </div>
-                        <div class="service__block">
+                        <div class="service__block" data-id="guarantee">
                             <h3 class="service__block__title">Гарантия</h3>
                             <p class="service__block__text">
                                 Если купленный у нас товар поломается или заискрит,<br>
@@ -236,7 +236,7 @@
                             </p>
                             <img class="service__block__img" src="img/guarantee.png" width="389" height="283" alt="Гарантия">
                         </div>
-                        <div class="service__block">
+                        <div class="service__block" data-id="loan">
                             <h3 class="service__block__title">Кредит</h3>
                             <p class="service__block__text">
                                 Залезть в долговую яму стало проще!<br>
