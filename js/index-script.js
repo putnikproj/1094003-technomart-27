@@ -18,8 +18,7 @@ var map_close = document.querySelector(".map-popup__close");
 var slides = document.querySelectorAll(".menu__slider__item");
 var slides_amount = slides.length - 1;
 var slides_current = 0;
-var slides_leftbutton = document.querySelector(".menu__slider__nav-item-left");
-var slides_rightbutton = document.querySelector(".menu__slider__nav-item-right");
+var slides_button = document.querySelectorAll(".menu__slider__nav-item");
 var pagination = document.querySelectorAll(".menu__slider__pagination__item");
 var pagination_amount = pagination.length - 1;
 var pagination_current = 0;
@@ -76,6 +75,9 @@ window.addEventListener("keydown", function (evt) {
             modal.classList.remove("modal__opened");
             modal.classList.remove("modal__error");
         }
+        if (map.classList.contains("modal__opened")) {
+            map.classList.remove("modal__opened");
+        }
     }
 });
 
@@ -93,81 +95,62 @@ map_close.addEventListener("click", function (evt) {
 
 // Slider
 
-slides_rightbutton.addEventListener("click", function (evt) {
+slides_button[0].addEventListener("click", function (evt) {
     evt.preventDefault();
     slides[slides_current].classList.remove("menu__slider__active-item");
-    if (slides_current + 1 > slides_amount) {
-        slides[0].classList.add("menu__slider__active-item");
-    } else {
-        slides[slides_current + 1].classList.add("menu__slider__active-item");
-    }
     slides_current = slides_current + 1;
     if (slides_current > slides_amount) {
         slides_current = 0;
     };
+    slides[slides_current].classList.add("menu__slider__active-item");
     // Pagination
     pagination[pagination_current].classList.remove("menu__slider__pagination__item-active");
-    if (pagination_current + 1 > pagination_amount) {
-        pagination[0].classList.add("menu__slider__pagination__item-active");
-    } else {
-        pagination[pagination_current + 1].classList.add("menu__slider__pagination__item-active");
-    }
     pagination_current = pagination_current + 1;
     if (pagination_current > pagination_amount) {
         pagination_current = 0;
     };
+    pagination[pagination_current].classList.add("menu__slider__pagination__item-active");
 });
 
-slides_leftbutton.addEventListener("click", function (evt) {
+slides_button[1].addEventListener("click", function (evt) {
     evt.preventDefault();
     slides[slides_current].classList.remove("menu__slider__active-item");
-    if (slides_current - 1 < 0) {
-        slides[slides_amount].classList.add("menu__slider__active-item");
-    } else {
-        slides[slides_current - 1].classList.add("menu__slider__active-item");
-    }
     slides_current = slides_current - 1;
     if (slides_current < 0) {
         slides_current = slides_amount;
     };
+    slides[slides_current].classList.add("menu__slider__active-item");
     // Pagination
     pagination[pagination_current].classList.remove("menu__slider__pagination__item-active");
-    if (pagination_current - 1 < 0) {
-        pagination[pagination_amount].classList.add("menu__slider__pagination__item-active");
-    } else {
-        pagination[pagination_current - 1].classList.add("menu__slider__pagination__item-active");
-    }
     pagination_current = pagination_current - 1;
     if (pagination_current < 0) {
         pagination_current = pagination_amount;
     };
+    pagination[pagination_current].classList.add("menu__slider__pagination__item-active");
 });
 
 // Service
 
-service_list[0].addEventListener("click", function (evt) {
-    for (var i = 0; i < service_list.length; i++) {
-        service_list[i].classList.remove("service__active-item");
-        service_blocks[i].classList.remove("service__active-block");
-    }
-    service_list[0].classList.add("service__active-item");
-    service_blocks[0].classList.add("service__active-block");
-});
+function switching(x) {
+    service_list[x].addEventListener("click", function (evt) {
+        evt.preventDefault();
+        for (var i = 0; i < service_list.length; i++) {
+            service_list[i].classList.remove("service__active-item");
+            service_blocks[i].classList.remove("service__active-block");
+        }
+        service_list[x].classList.add("service__active-item");
+        service_blocks[x].classList.add("service__active-block");
+    });
+}
 
-service_list[1].addEventListener("click", function (evt) {
-    for (var i = 0; i < service_list.length; i++) {
-        service_list[i].classList.remove("service__active-item");
-        service_blocks[i].classList.remove("service__active-block");
-    }
-    service_list[1].classList.add("service__active-item");
-    service_blocks[1].classList.add("service__active-block");
-});
+// Service counting help
 
-service_list[2].addEventListener("click", function (evt) {
-    for (var i = 0; i < service_list.length; i++) {
-        service_list[i].classList.remove("service__active-item");
-        service_blocks[i].classList.remove("service__active-block");
-    }
-    service_list[2].classList.add("service__active-item");
-    service_blocks[2].classList.add("service__active-block");
-});
+var help = [];
+
+for (var i = 0; i < 3; i++) {
+    help[i] = switching.bind(this, i);
+}
+
+for (var j = 0; j < 3; j++) {
+    help[j]();
+}

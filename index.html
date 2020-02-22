@@ -107,8 +107,8 @@
                                 </li>
                             </ul>
                             <ul class="menu__slider__nav">
-                                <li class="menu__slider__nav-item menu__slider__nav-item-left"><button type="button"><span class="visually-hidden">Стрелка влево</span></button></li>
-                                <li class="menu__slider__nav-item menu__slider__nav-item-right"><button type="button"><span class="visually-hidden">Стрелка вправо</span></button></li>
+                                <li class="menu__slider__nav-item"><button type="button"><span class="visually-hidden">Стрелка влево</span></button></li>
+                                <li class="menu__slider__nav-item"><button type="button"><span class="visually-hidden">Стрелка вправо</span></button></li>
                             </ul>
                             <ul class="menu__slider__pagination">
                                 <li class="menu__slider__pagination__item menu__slider__pagination__item-active"><button type="button"></button></li>
@@ -351,6 +351,18 @@
             </form>
             <button class="contact-popup__close" type="button"><span class="visually-hidden">Закрыть форму</span></button>
         </div>
-    <script src="js/index-script.js"></script> 
+        <div class="added-to-basket-popup">
+            <div class="added-to-basket-popup__top">
+                <img class="added-to-basket-popup__img" src="img/modal-check.svg" alt="Зеленая галочка">
+                <p class="added-to-basket-popup__title">Товар добавлен в корзину!</p>
+            </div>
+            <div class="added-to-basket-popup__bottom">
+                <a class="added-to-basket-popup__red-link" href="#">Оформить заказ</a>
+                <a class="added-to-basket-popup__white-link" href="catalog.html">Продолжить покупки</a>
+            </div>
+            <button class="added-to-basket-popup__close" type="button"></button>
+        </div>
+        <script src="js/index-script.js"></script> 
+        <script src="js/add-to-basket.js"></script>
     </body>
 </html>
