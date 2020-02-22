@@ -101,32 +101,29 @@ for (var i = 0; i < 2; i++) {
         slides_button[index].addEventListener("click", function (evt) {
             evt.preventDefault();
             slides[slides_current].classList.remove("menu__slider__active-item");
+            pagination[pagination_current].classList.remove("menu__slider__pagination__item-active");
             if (index == 0) {
                 slides_current = slides_current - 1;
                 if (slides_current < 0) {
                     slides_current = slides_amount;
+                };
+
+                pagination_current = pagination_current - 1;
+                if (pagination_current < 0) {
+                    pagination_current = pagination_amount;
                 };
             } else {
                 slides_current = slides_current + 1;
                 if (slides_current > slides_amount) {
                     slides_current = 0;
                 };
-            }
-            slides[slides_current].classList.add("menu__slider__active-item");
 
-            // Pagination
-            pagination[pagination_current].classList.remove("menu__slider__pagination__item-active");
-            if (index == 0) {
-                pagination_current = pagination_current - 1;
-                if (pagination_current < 0) {
-                    pagination_current = pagination_amount;
-                };
-            } else {
                 pagination_current = pagination_current + 1;
                 if (pagination_current > pagination_amount) {
                     pagination_current = 0;
                 };
             }
+            slides[slides_current].classList.add("menu__slider__active-item");
             pagination[pagination_current].classList.add("menu__slider__pagination__item-active");
         });
     })(i);
