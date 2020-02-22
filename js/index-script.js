@@ -147,10 +147,10 @@ function switching(x) {
 
 var help = [];
 
-for (var i = 0; i < 3; i++) {
+for (var i = 0; i < service_list.length; i++) {
     help[i] = switching.bind(this, i);
 }
 
-for (var j = 0; j < 3; j++) {
+for (var j = 0; j < service_list.length; j++) {
     help[j]();
 }
