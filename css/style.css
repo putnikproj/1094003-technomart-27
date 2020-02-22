@@ -1077,9 +1077,17 @@ a {
 }
 
 .service__block__link {
+    display: block;
+    margin-top: 25px;
+    text-align: center;
+    text-transform: uppercase;
     color: white;
     font-size: 14px;
-    background-color: #ee3643;
+    width: 195px;
+    padding: 11px 0;
+    padding-bottom: 9px;
+    background-color: #ff5357;
+    border-radius: 3px;
 }
 
 .service__block:not(.service__active-block) {

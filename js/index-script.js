@@ -1,3 +1,4 @@
+// Contact us
 var modal = document.querySelector(".contact-popup");
 var modal_open = document.querySelector(".contacts__link");
 var modal_close = document.querySelector(".contact-popup__close");
@@ -8,10 +9,12 @@ var modal_form = document.querySelector(".contact-popup__form");
 var isStorageSupport = true;
 var storage = "";
 
+// Map
 var map = document.querySelector(".map-popup");
 var map_open = document.querySelector(".contacts__open-popup");
 var map_close = document.querySelector(".map-popup__close");
 
+// Slides
 var slides = document.querySelectorAll(".menu__slider__item");
 var slides_amount = slides.length - 1;
 var slides_current = 0;
@@ -21,13 +24,18 @@ var pagination = document.querySelectorAll(".menu__slider__pagination__item");
 var pagination_amount = pagination.length - 1;
 var pagination_current = 0;
 
+// Service
+var service_list = document.querySelectorAll(".service__item");
+var service_blocks = document.querySelectorAll(".service__block");
+
+
+// Contact us
+
 try {
     storage = localStorage.getItem("name");
 } catch (err) {
     isStorageSupport = false;
 }
-
-// Contact us
 
 modal_open.addEventListener("click", function (evt) {
     evt.preventDefault();
@@ -133,4 +141,33 @@ slides_leftbutton.addEventListener("click", function (evt) {
     if (pagination_current < 0) {
         pagination_current = pagination_amount;
     };
+});
+
+// Service
+
+service_list[0].addEventListener("click", function (evt) {
+    for (var i = 0; i < service_list.length; i++) {
+        service_list[i].classList.remove("service__active-item");
+        service_blocks[i].classList.remove("service__active-block");
+    }
+    service_list[0].classList.add("service__active-item");
+    service_blocks[0].classList.add("service__active-block");
+});
+
+service_list[1].addEventListener("click", function (evt) {
+    for (var i = 0; i < service_list.length; i++) {
+        service_list[i].classList.remove("service__active-item");
+        service_blocks[i].classList.remove("service__active-block");
+    }
+    service_list[1].classList.add("service__active-item");
+    service_blocks[1].classList.add("service__active-block");
+});
+
+service_list[2].addEventListener("click", function (evt) {
+    for (var i = 0; i < service_list.length; i++) {
+        service_list[i].classList.remove("service__active-item");
+        service_blocks[i].classList.remove("service__active-block");
+    }
+    service_list[2].classList.add("service__active-item");
+    service_blocks[2].classList.add("service__active-block");
 });
