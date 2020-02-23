@@ -6,7 +6,7 @@ var modal_nameinput = document.querySelector(".contact-popup__input-name");
 var modal_emailinput = document.querySelector(".contact-popup__input-email");
 var modal_textinput = document.querySelector(".contact-popup__input-text");
 var modal_form = document.querySelector(".contact-popup__form");
-var isStorageSupport = true;
+var is_storage_support = true;
 var storage = "";
 
 // Map
@@ -18,10 +18,9 @@ var map_close = document.querySelector(".map-popup__close");
 var slides = document.querySelectorAll(".menu__slider__item");
 var slides_amount = slides.length - 1;
 var slides_current = 0;
-var slides_button = document.querySelectorAll(".menu__slider__nav-item");
+var slides_button_left = document.querySelector(".menu__slider__nav-left");
+var slides_button_right = document.querySelector(".menu__slider__nav-right");
 var pagination = document.querySelectorAll(".menu__slider__pagination__item");
-var pagination_amount = pagination.length - 1;
-var pagination_current = 0;
 
 // Service
 var service_list = document.querySelector(".service__list");
@@ -34,7 +33,7 @@ var service_blocks = document.querySelectorAll(".service__block");
 try {
     storage = localStorage.getItem("name");
 } catch (err) {
-    isStorageSupport = false;
+    is_storage_support = false;
 }
 
 modal_open.addEventListener("click", function (evt) {
@@ -62,7 +61,7 @@ modal_form.addEventListener("submit", function (evt) {
         modal.offsetWidth = modal.offsetWidth;
         modal.classList.add("modal__error");
     } else {
-        if (isStorageSupport) {
+        if (is_storage_support) {
             localStorage.setItem("name", modal_nameinput.value);
             localStorage.setItem("email", modal_emailinput.value);
         }
@@ -96,38 +95,22 @@ map_close.addEventListener("click", function (evt) {
 
 // Slider
 
-for (var i = 0; i < 2; i++) {
-    (function (index) {
-        slides_button[index].addEventListener("click", function (evt) {
-            evt.preventDefault();
-            slides[slides_current].classList.remove("menu__slider__active-item");
-            pagination[pagination_current].classList.remove("menu__slider__pagination__item-active");
-            if (index == 0) {
-                slides_current = slides_current - 1;
-                if (slides_current < 0) {
-                    slides_current = slides_amount;
-                };
+function change_slide(evt, direction) {
+    evt.preventDefault();
 
-                pagination_current = pagination_current - 1;
-                if (pagination_current < 0) {
-                    pagination_current = pagination_amount;
-                };
-            } else {
-                slides_current = slides_current + 1;
-                if (slides_current > slides_amount) {
-                    slides_current = 0;
-                };
+    slides[slides_current].classList.remove("menu__slider__active-item");
+    pagination[slides_current].classList.remove("menu__slider__pagination__item-active");
 
-                pagination_current = pagination_current + 1;
-                if (pagination_current > pagination_amount) {
-                    pagination_current = 0;
-                };
-            }
-            slides[slides_current].classList.add("menu__slider__active-item");
-            pagination[pagination_current].classList.add("menu__slider__pagination__item-active");
-        });
-    })(i);
+    slides_current = slides_current + direction;
+    if ((direction < 0) && (slides_current < 0)) { slides_current = slides_amount; };
+    if ((direction > 0) && (slides_current > slides_amount)) { slides_current = 0; };
+
+    slides[slides_current].classList.add("menu__slider__active-item");
+    pagination[slides_current].classList.add("menu__slider__pagination__item-active");
 }
+
+slides_button_left.addEventListener("click", function (evt) { change_slide(evt, -1) }); 
+slides_button_right.addEventListener("click", function (evt) { change_slide(evt, +1) }); 
 
 // Service
 
