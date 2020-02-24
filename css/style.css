@@ -1082,6 +1082,8 @@ a {
     padding-bottom: 9px;
     background-color: #ff5357;
     border-radius: 3px;
+    position: relative;
+    z-index: 1;
 }
 
 .service__block:not(.service__active-block) {
