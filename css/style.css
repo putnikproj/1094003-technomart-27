@@ -844,7 +844,7 @@ a {
     margin: 0;
     margin-top: 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
 }
 
@@ -1857,7 +1857,7 @@ input[type=number]{
     list-style: none;
     padding: 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
     margin: 0;
     margin-top: 20px;
@@ -2045,6 +2045,19 @@ input[type=number]{
     border: 1px solid #e5e5e5;
     font-family: "PT Sans", Arial, sans-serif;
     transition: all 0.3s;
+}
+
+.catalog__list .product-card,
+.popular__list .product-card {
+    margin-right: 20px;
+}
+
+.catalog__list .product-card:nth-child(3n) {
+    margin-right: 0;
+}
+
+.popular__list .product-card:nth-child(4n) {
+    margin-right: 0;
 }
 
 .product-card:hover {
