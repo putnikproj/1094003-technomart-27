@@ -753,7 +753,7 @@ a {
     margin: 0 auto;
     padding: 0;
     position: absolute;
-    bottom: 34px;
+    bottom: 36px;
     left: 0;
     right: 0;
     display: flex;
@@ -1189,7 +1189,7 @@ a {
 .contacts__link {
     width: 300px;
     box-sizing: border-box;
-    margin-top: 36px;
+    margin-top: 40px;
     padding-left: 45px;
 }
 
