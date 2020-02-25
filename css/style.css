@@ -93,7 +93,6 @@ a {
 }
 
 .header-top__search {
-    background-color: inherit;
     border: none;
     color: black;
     padding: 12px 0;
@@ -511,7 +510,6 @@ a {
     line-height: 1;
     box-sizing: border-box;
     padding: 20px 30.5px;
-    line-height: 1;
 }
 
 .header-bottom__nav-item:hover {
@@ -1977,7 +1975,6 @@ input[type=number]{
 .added-to-basket-popup__title {
     font-family: "Cuprum", Arial, sans-serif;
     font-size: 30px;
-    line-height: 1;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
